@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-crimson-dark: #4A0808;
+  --color-crimson-darker: #2D0808;
+  --color-crimson-darkest: #1E0707;
+  --color-crimson-light: #EF4444;
+  --color-crimson-bright: #FCA5A5;
+}
+
+body {
+  background-color: var(--color-crimson-darkest);
+  color: var(--color-crimson-light);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Add subtle gradient backgrounds */
+.gradient-dark {
+  background: linear-gradient(135deg, var(--color-crimson-darkest) 0%, var(--color-crimson-darker) 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, #DC2626 0%, #9333EA 100%);
+}
+
+/* Add glow effects */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Custom button styles */
+.button-primary {
+  @apply bg-crimson text-white px-6 py-3 rounded-lg hover:bg-crimson-light transition-all hover:shadow-glow;
+}
+
+.button-secondary {
+  @apply border-2 border-crimson px-6 py-3 rounded-lg hover:border-crimson-light hover:text-crimson-light transition-all hover:shadow-glow;
+}
+
+/* Card styles */
+.card {
+  @apply bg-crimson-darker border border-crimson rounded-lg p-6 hover:border-crimson-light transition-all hover:shadow-glow;
+}
+
+/* Input styles */
+.input-primary {
+  @apply bg-crimson-darkest border-2 border-crimson-dark p-3 rounded-lg focus:border-crimson focus:outline-none focus:ring-2 focus:ring-crimson focus:ring-opacity-50 text-crimson-light placeholder-crimson-dark;
+}
+
+/* Navigation styles */
+.nav-link {
+  @apply flex items-center gap-2 px-4 py-2 rounded-lg transition-colors hover:bg-crimson hover:text-white hover:shadow-glow;
+}
+
+.nav-link.active {
+  @apply bg-crimson text-white shadow-glow;
+}
